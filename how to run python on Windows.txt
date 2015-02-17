@@ -1,0 +1,29 @@
+When you execute a script without typing "python" in front, you need to know two things about how Windows invokes the program. First is to find out what kind of file Windows thinks it is:
+
+    C:\>assoc .py
+    .py=Python.File
+Next, you need to know how Windows is executing things with that extension. It's associated with the file type "Python.File", so this command shows what it will be doing:
+
+    C:\>ftype Python.File
+    Python.File="c:\python26\python.exe" "%1" %*
+So on my machine, when I type "blah.py foo", it will execute this exact command, with no difference in results than if I had typed the full thing myself:
+
+    "c:\python26\python.exe" "blah.py" foo
+If you type the same thing, including the quotation marks, then you'll get results identical to when you just type "blah.py foo". Now you're in a position to figure out the rest of your problem for yourself.
+
+(Or post more helpful information in your question, like actual cut-and-paste copies of what you see in the console. Note that people who do that type of thing get their questions voted up, and they get reputation points, and more people are likely to help them with good answers.)
+
+Brought In From Comments:
+
+Even if assoc and ftype display the correct information, it may happen that the arguments are stripped off. What may help in that case is directly fixing the relevant registry keys for Python. Set the
+
+HKEY_CLASSES_ROOT\Applications\python26.exe\shell\open\command
+key to:
+
+"C:\Python26\python26.exe" "%1" %*
+Likely, previously, %* was missing. Similarly, set
+
+ HKEY_CLASSES_ROOT\py_auto_file\shell\open\command
+to the same value. See eli.thegreenplace.net/2010/12/14/… – parvus Oct 15 '12 at 9:57
+
+@parvus Your comment was the ultimate solution for me. Even with the associations reading correctly, these two keys were both incorrectly set. – Nathan Cox Jul 17 at 23:09

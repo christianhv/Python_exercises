@@ -1,0 +1,20 @@
+You've got to add the shebang:
+
+#!/usr/bin/env python
+Then make the script executable:
+
+chmod +x foo
+Then you can run it like any other executable:
+
+./foo
+And a note from Homer6: if you're editing the file from windows and invoking it on linux, you may run into the cryptic "No such file or directory" error. It's due to the line endings of the lines being CRLF instead of LF. If you convert them to LF, the script will execute as expected. Notepad++ > View > Show Symbols > Show End of Line to show the EOL characters. And Notepad++ > Edit > EOL Conversion > Unix Format to convert all line endings to use LF. Alternatively, you can use the dos2unix tool (dos2unix foo.py), which is present on most Linux systems.
+
+shareimprove this answer
+edited Nov 13 '12 at 20:44
+
+answered Feb 14 '11 at 15:00
+
+David Wolever
+38.2k21147304
+  	 	
+As a side note: it's better to use /usr/bin/env than the path to Python in the shebang line: if you hard-code a path, the script will stop working if Python is ever moved… But so long as Python is on $PATH, /usr/bin/env will work. –  David Wolever Feb 14 '11 at 15:05
