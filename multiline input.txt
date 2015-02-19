@@ -1,0 +1,6 @@
+sentinel = '' # ends when this string is seen
+for line in iter(raw_input, sentinel):
+    pass # do things here
+To get every line as a string you can do:
+
+'\n'.join(iter(raw_input, sentinel))
