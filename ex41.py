@@ -4,9 +4,6 @@ import random
 from urllib import urlopen
 import sys
 
-def print_bold(str):
-    print '\033[1m' + str + '\033[0m'
-
 WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
 
@@ -23,6 +20,9 @@ PHRASES = {
 PHRASE_FIRST = False
 if len(sys.argv) == 2 and sys.argv[1] == "english":
     PHRASE_FIRST = True
+
+def print_bold(str):
+    print '\033[1m' + str + '\033[0m'
 
 def load_word():
     # load up the word from the website
