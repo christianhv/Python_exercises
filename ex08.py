@@ -11,4 +11,4 @@ print formatter % (
     "that yould type up right.",
     "But it didn't sing",
     "So I said goodnight."
-    )
+)

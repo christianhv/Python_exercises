@@ -9,7 +9,7 @@ prompt = "> "
 print "Hi %s, I am the %s script." % (username, script)
 print "I would like to ask you a few questions..."
 print "Do you like me %s ?" % username
-likes = raw_input(prompt) 
+likes = raw_input(prompt)
 
 print "Where do you live %s?" % username
 lives = raw_input(prompt)

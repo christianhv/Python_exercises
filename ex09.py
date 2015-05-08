@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#Here is some new strange stuff, remember type it exactly.
+# Here is some new strange stuff, remember type it exactly.
 
 days = "Mon Tue Wed Thu Fri Sat Sun"
 months = "\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"

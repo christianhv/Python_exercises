@@ -2,8 +2,8 @@
 
 my_name = 'Christian I. Hdez. V.'
 my_age = 35
-my_height = 180 #cm
-my_weight = 85  #kg.
+my_height = 180  # cm
+my_weight = 85  # kg.
 my_eyes = 'brown'
 my_teeth = 'ecru'
 my_hair = 'black'

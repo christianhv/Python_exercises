@@ -1,20 +1,19 @@
 #!/usr/bin/env python
 import subprocess
-import sys
 import os
 
-#proc = subprocess.Popen(['tail', '-500', 'mylogfile.log'], stdout=subprocess.PIPE)
+# proc = subprocess.Popen(['tail', '-500', 'mylogfile.log'], stdout=subprocess.PIPE)
 subprocess.Popen('echo $PWD', shell=True)
 subprocess.Popen('echo $SHELL', shell=True)
-current_Process = subprocess.Popen(['echo', '$0' ], shell=False, stdout=subprocess.PIPE)
+current_Process = subprocess.Popen(['echo', '$0'], shell=False, stdout=subprocess.PIPE)
 for line in current_Process.stdout.readlines():
-   print line.rstrip()
+    print line.rstrip()
 #proc = subprocess.Popen(['echo', $SHELL ], stdout=subprocess.PIPE)
 
 '''
 for line in proc.stdout.readlines():
 print line.rstrip()
-''' 
+'''
 """"
 You can also use triple-double quote
 in order to have multiline comments and 
@@ -31,7 +30,6 @@ print current_Shell
 print subprocess.Popen("echo $0", stdout=subprocess.PIPE, shell=True).stdout.read()
 
 print subprocess.Popen("echo $0", stdout=subprocess.PIPE, shell=True, executable="/bin/bash").stdout.read()
-
 
 print subprocess.Popen("cat <(echo TEST)", stdout=subprocess.PIPE, shell=True, executable="/bin/bash").stdout.read()
 

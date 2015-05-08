@@ -16,5 +16,5 @@ print backslash_cat
 print fat_cat
 
 while True:
-    for i in ["/","-","|","\\","|"]:
+    for i in ["/", "-", "|", "\\", "|"]:
         print "%s" % i,

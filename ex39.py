@@ -39,7 +39,7 @@ for state, abbrev in states.items():
 # Print every city in state
 print "-" * 10
 for state, abbrev in states.items():
-    print "%s has the city %s" % (state,cities[abbrev])
+    print "%s has the city %s" % (state, cities[abbrev])
 
 # Now do both at the same time
 print "-" * 10

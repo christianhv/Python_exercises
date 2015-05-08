@@ -15,9 +15,10 @@ def mientras(it):
         print "At the bottom i is %d" % it
         mientras(it)
 
+
 mientras(i)
 
 print "The numbers: "
 
 for num in numbers:
-   print numbers
+    print numbers

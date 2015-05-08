@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from sys import argv
+
 script, filename = argv
 
 print "We are going to erase %r." % filename
@@ -32,7 +33,7 @@ print "I'm going to write this to the file."
     target.write("\n")
 """
 
-#So, we can do it with less lines
+# So, we can do it with less lines
 strToFile = " %s \n %s \n %s \n" % (line1, line2, line3)
 target.write(strToFile)
 

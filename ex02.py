@@ -10,9 +10,9 @@
  line. All between the codes is ignored
 """
 
-print "I could have code like this" # and everything after the # will be ignored
+print "I could have code like this"  # and everything after the # will be ignored
 
-#You can also use comment to disable or comment out a piece of code like this:
+# You can also use comment to disable or comment out a piece of code like this:
 #print "This won't run"
 
 print "This will run."
